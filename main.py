@@ -7,20 +7,20 @@ driver = webdriver.Chrome('C:\\Users\\shalini\\Downloads\\chromedriver-win64\\ch
 #URL of the web application (in this case, LeetCode login)
 url = "https://leetcode.com/accounts/login/?next="
 
-# Opening the URL in the Chrome browser
+#opening the URL in the Chrome browser
 driver.get(url)
 
-# locating the username and password input fields on the page
+#locating the username and password input fields on the page
 username_field = driver.find_element_by_name("login")
 password_field = driver.find_element_by_name("password")
 
-# Simulating user input by entering username and password
+#simulating user input by entering username and password
 username_field.send_keys("example@gmail.com")
 password_field.send_keys("examplepassword")
 
-# Locating the login button on the web page to simulate a click event
+#locating the login button on the web page to simulate a click event
 login_button = driver.find_element_by_id("signin_btn")
 login_button.click()
 
-# Closing the browser and WebDriver after completing the login process
+#closing the browser and WebDriver after completing the login process
 driver.quit()
